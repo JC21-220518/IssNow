@@ -24,6 +24,7 @@ namespace IssNow.api
             {
                 if (double.TryParse(Latitude, out double lat))
                 {
+                    lat = Math.Truncate(lat * Math.Pow(10, 2)) / Math.Pow(10, 2);
                     return Math.Abs(lat);
                 }
                 return 0; // デフォルト値（必要に応じて調整）
@@ -37,6 +38,7 @@ namespace IssNow.api
             {
                 if (double.TryParse(Longitude, out double lon))
                 {
+                    lon = Math.Truncate(lon * Math.Pow(10, 2)) / Math.Pow(10, 2);
                     return Math.Abs(lon);
                 }
                 return 0; // デフォルト値（必要に応じて調整）
