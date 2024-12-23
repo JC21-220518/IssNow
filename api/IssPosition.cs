@@ -50,7 +50,7 @@ namespace IssNow.api
             {
                 if (double.TryParse(Latitude, out double lat))
                 {
-                    return lat >= 0 ? "N" : "S";
+                    return lat >= 0 ? "S" : "N";
                 }
                 return "Invalid"; // エラー時の値
             }
